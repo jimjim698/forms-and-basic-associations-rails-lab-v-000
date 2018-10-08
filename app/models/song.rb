@@ -21,7 +21,7 @@ class Song < ActiveRecord::Base
   end 
   
   def genre_name
-    song.genre.name 
+    self.genre.name 
   end 
   
   def note_contents
