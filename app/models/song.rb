@@ -21,11 +21,11 @@ class Song < ActiveRecord::Base
   end 
   
   def genre_name
-    self.genre.name 
+    self.genre.name
   end 
   
   def genre_name=(name)
-    self.genre.name = name 
+    self.genre.name = Genre.find_or_create_by(name: name) 
   end 
   
   def note_contents
