@@ -24,6 +24,10 @@ class Song < ActiveRecord::Base
     self.genre.name 
   end 
   
+  def genre_name=(name)
+    self.genre.name = name 
+  end 
+  
   def note_contents
     self.notes.collect do |song|
       song.content
