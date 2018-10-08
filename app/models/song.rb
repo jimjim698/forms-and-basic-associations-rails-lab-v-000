@@ -19,13 +19,13 @@ class Song < ActiveRecord::Base
     self.genre ? self.genre.name : nil 
   end 
   
-  def note_content
+  def note_contents
     self.notes.collect do |song|
       song.content
     end 
   end 
     
-    def note_content=(notes)
+    def note_contents=(notes)
       notes.collect do |note|
         if note != ""
           self.notes.build(content: note)
