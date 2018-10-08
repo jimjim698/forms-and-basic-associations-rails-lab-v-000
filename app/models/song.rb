@@ -24,5 +24,7 @@ class Song < ActiveRecord::Base
       song.content
     end 
     
+    def note_content=(note)
+    
   
 end
