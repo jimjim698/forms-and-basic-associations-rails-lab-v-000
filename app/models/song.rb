@@ -27,7 +27,7 @@ class Song < ActiveRecord::Base
     def note_content=(notes)
       notes.collect do |note|
         if note != ""
-          
+          self.notes.build
     
   
 end
